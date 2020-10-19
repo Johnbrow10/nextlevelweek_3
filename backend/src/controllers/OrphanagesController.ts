@@ -2,6 +2,7 @@ import { Response, Request } from 'express';
 import { getRepository } from 'typeorm';
 import Orphanage from '../models/Orphanage';
 
+
 export default {
 
     async index(request: Request, response:Response){  
@@ -35,6 +36,12 @@ export default {
         } = request.body;
         
         const orphanagesRepository = getRepository(Orphanage);
+
+        const requestImages = request.files as Express.Multer.File[];
+
+        const images = requestImages.map(images => {
+            return {path: images.filename}
+        });
     
         const orphanage = orphanagesRepository.create({
             name,
@@ -44,6 +51,7 @@ export default {
             instructions,
             opening_hours,
             opening_on_weekends,
+            images
         });
     
          await orphanagesRepository.save(orphanage);
