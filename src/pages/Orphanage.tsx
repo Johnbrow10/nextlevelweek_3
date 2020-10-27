@@ -17,7 +17,7 @@ const happyMapIcon = L.icon({
     popupAnchor: [0, -60]
 })
 
-export default function orphanage() {
+export default function Orphanage() {
     const { goBack } = useHistory();
 
     return (
