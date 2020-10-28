@@ -7,7 +7,7 @@ import { FiArrowLeft, FiPlus } from 'react-icons/fi';
 
 import mapMarkerImg from '../images/map-marker.svg';
 
-import '../styles/pages/orphanage.css';
+import '../styles/pages/create-orphanage.css';
 
 const happyMapIcon = L.icon({
     iconUrl: mapMarkerImg,
@@ -89,7 +89,7 @@ export default function OrphanagesMap() {
 
                         <div className="input-block">
                             <label htmlFor="opening_on_weekends">Instruções</label>
-                            <div className="button_select">
+                            <div className="button-select">
                                 <button type="button" className="active">Sim</button>
                                 <button type="button">Não</button>
                             </div>

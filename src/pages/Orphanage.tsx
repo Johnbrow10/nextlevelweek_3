@@ -63,20 +63,21 @@ export default function Orphanage() {
 
 
                         <div className="map-container">
-                            <Map center={[-23.7011216, -46.7924707]}
-                                zomm={16}
+                            <Map
+                                center={[-23.7011216, -46.7924707]}
+                                zoom={16}
                                 style={{ width: '100%', height: 280 }}
                                 dragging={false}
                                 touchZoom={false}
                                 zoomControl={false}
-                                scrollWhellZoom={false}
+                                scrollWheelZoom={false}
                                 doubleClickZoom={false}
                             >
                                 <TileLayer
                                     // mapa do MapBox litgh-v10
                                     url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
                                 />
-                                < Marker interactive={false} icon={happyMapIcon} position={[-23.7011216, -46.7924707]}></Marker>
+                                <Marker interactive={false} icon={happyMapIcon} position={[-23.7011216, -46.7924707]} />
                             </Map>
 
                             <footer> <a href=""> Ver rotas no Google Maps</a> </footer>
