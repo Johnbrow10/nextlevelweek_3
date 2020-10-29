@@ -46,7 +46,7 @@ function OrphanagesMap() {
 
             <Map
                 center={[-23.7011216, -46.7924707]}
-                zoom={15}
+                zoom={17}
                 style={{ width: '100%', height: '100%' }}
             >
                 {/* mapa do openstreetmap */}
